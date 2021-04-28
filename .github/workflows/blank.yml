@@ -26,8 +26,10 @@ jobs:
       - uses: actions/setup-python@v2.2.2
 
       # Runs a single command using the runners shell
-      - name: pip install
-        run: pip install -r ./requirements.txt
+      - name: Install Python dependencies
+        uses: py-actions/py-dependency-install@v2
+        with:
+          path: "requirements.txt"
       - name: test
         run: pytest --cov=. tests.py
 
