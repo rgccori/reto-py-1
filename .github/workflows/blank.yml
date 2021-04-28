@@ -31,7 +31,7 @@ jobs:
         
     - name: Install requirements
       run: |
-        pip install -r requirements.txt -e .
+        pip install -r requirements.txt
     - name: test
       run: pytest --cov=. tests.py
 
