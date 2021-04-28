@@ -2,9 +2,7 @@
 import pytest
 
 from maths import add_ten
-
-path_large_number_fixture = 'large_num_fixture.txt'
-
+from maths import sumar
 
 def test_add_ten():
     """ Tests the add_ten function """
@@ -20,12 +18,8 @@ def test_add_ten_none():
     """ Tests that add_ten throws a ValueError when None input given """
     assert add_ten(None) is None
 
-
-def test_large_number():
-
-    with open(path_large_number_fixture, 'r') as fh:
-        expected = int(fh.readline())
-
-    assert add_ten(90) == expected
+def test_sumar_numeros():
+    """ Test sumando 2 numeros """
+    assert 8 == sumar(3,5)
 
 

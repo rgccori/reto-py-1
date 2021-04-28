@@ -8,3 +8,6 @@ def add_ten(x):
     else:
         return x + 10
 
+def sumar(x,y):
+    return x + y
+
