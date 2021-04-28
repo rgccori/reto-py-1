@@ -22,17 +22,17 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/setup-python@v2.2.2
+    - uses: actions/checkout@v2
 
-      - name : recreando txt
-        run : cp requirements.txt /tmp/
-      # Runs a single command using the runners shell
-      - name: Install Python dependencies
-        uses: py-actions/py-dependency-install@v2
-        with:
-          path: "/tmp/requirements.txt"
-      - name: test
-        run: pytest --cov=. tests.py
+    - name: Setup Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
+        
+    - name: Install requirements
+      run: |
+        pip install -r requirements.txt -e .
+    - name: test
+      run: pytest --cov=. tests.py
 
 
