@@ -26,8 +26,7 @@ jobs:
       - uses: actions/setup-python@v2.2.2
 
       - name : recreando txt
-        run : |
-        cp requirements.txt /tmp/
+        run : cp requirements.txt /tmp/
       # Runs a single command using the runners shell
       - name: Install Python dependencies
         uses: py-actions/py-dependency-install@v2
