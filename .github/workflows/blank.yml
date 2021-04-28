@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: pip install
-        run: pip install -r requirements.txt
+        run: pip install -r ../../requirements.txt
       - name: test
         run: pytest --cov=. tests.py
 
