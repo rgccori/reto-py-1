@@ -33,6 +33,6 @@ jobs:
       run: |
         pip install -r requirements.txt
     - name: test
-      run: pytest --cov=. tests.py
+      run: pytest tests.py
 
 
