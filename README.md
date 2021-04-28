@@ -17,8 +17,6 @@ Con la siguiente linea de comando:
 $ pytest tests.py
 ```
 
-Si todo esta correcto las pruebas se completarán
+Si todo esta correcto la prueba tendra el estado : passed , caso contario failed.
 
-tests.py ....                                                                                                                    [100%]
-
-======================================================= 4 passed in 0.01 seconds =======================================================
+tests.py ....                                                                                                                    

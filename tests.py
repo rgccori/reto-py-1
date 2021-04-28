@@ -1,15 +1,11 @@
 """ Tests for maths.py """
 import pytest
 
-from maths import hello
-from maths import sumar
+from hello import holaMundo
 
-def test_hello():
+def test_holaMundo():
     """ Test escribir hello world """
-    assert "Hello World" == hello()
+    assert "Hello World" == holaMundo()
 
-def test_sumar_numeros():
-    """ Test sumando 2 numeros """
-    assert 8 == sumar(3,5)
 
 
